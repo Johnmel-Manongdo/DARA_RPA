@@ -1,0 +1,1 @@
+"C:\Users\SPM\AppData\Local\Programs\UiPath\Studio\UiRobot.exe" -file "C:\Users\SPM\Desktop\Projects\RPA\MCC REPORT\Main.xaml"

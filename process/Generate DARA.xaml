@@ -1,0 +1,460 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Generate_DARA" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="582,2880" sap2010:WorkflowViewState.IdRef="Generate_SOA_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uia="clr-namespace:UiPathTeam.Interactive.Activities;assembly=UiPathTeam.Interactive.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="38">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPathTeam.Interactive.Activities.Properties</x:String>
+      <x:String>UiPathTeam.Interactive.Activities</x:String>
+      <x:String>NumberToWordsCurrency</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Python</x:String>
+      <x:String>UiPath.Python.Activities</x:String>
+      <x:String>System.Windows.Forms</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="48">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Python</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPathTeam.Interactive.Activities</AssemblyReference>
+      <AssemblyReference>NumberToWordsCurrency</AssemblyReference>
+      <AssemblyReference>ATOS.Secure_File.Activities</AssemblyReference>
+      <AssemblyReference>StringtoSecureString.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Callout.Activity</AssemblyReference>
+      <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Python.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="Generate_DARA" sap:VirtualizedContainerService.HintSize="592,2815" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_variables" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_list" />
+      <Variable x:TypeArguments="x:String" Name="TemplateVariableLead" />
+      <Variable x:TypeArguments="x:String" Name="TemplatPath" />
+      <Variable x:TypeArguments="x:String" Name="TemplateVariableTrail" />
+      <Variable x:TypeArguments="s:String[]" Name="LIstVariables" />
+      <Variable x:TypeArguments="x:String" Name="PathFIleGenerated" />
+      <Variable x:TypeArguments="x:String" Name="FileLocation" />
+      <Variable x:TypeArguments="x:String" Name="client_name" />
+      <Variable x:TypeArguments="x:Int32" Name="soaMessage" />
+      <Variable x:TypeArguments="x:Int32" Name="total" />
+      <Variable x:TypeArguments="x:Int32" Name="count" />
+      <Variable x:TypeArguments="x:String" Name="TemplatPath2" />
+      <Variable x:TypeArguments="x:String" Name="TemplatPath3" />
+      <Variable x:TypeArguments="x:Int32" Name="iteration" />
+      <Variable x:TypeArguments="x:Int32" Name="counter" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uia:DisplayMessage BackColor="{x:Null}" FontSize="{x:Null}" ForeColor="{x:Null}" DisplayName="Display Message" Handle="[soaMessage]" Hide="0" sap:VirtualizedContainerService.HintSize="530,124" sap2010:WorkflowViewState.IdRef="DisplayMessage_1" Message="DARA Generator" NewStyle="False" Position="TopLeft" Preset="Warning">
+      <uia:DisplayMessage.Opacity>
+        <InArgument x:TypeArguments="s:Nullable(x:Double)">
+          <Literal x:TypeArguments="s:Nullable(x:Double)" Value="0.8" />
+        </InArgument>
+      </uia:DisplayMessage.Opacity>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uia:DisplayMessage>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File - Copy Data to Excel" sap:VirtualizedContainerService.HintSize="530,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_32" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="process\Copy Data.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="python_path">C:\Users\SPMWNMPC357\AppData\Local\Programs\Python\Python36\</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="530,381" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="config\DARA Generator\config.xlsm">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,271" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExcelReadRange AddHeaders="True" DataTable="[dt_variables]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="338,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" PreserveFormat="True" SheetName="Variables">
+              <ui:ExcelReadRange.Range>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </ui:ExcelReadRange.Range>
+            </ui:ExcelReadRange>
+            <ui:ExcelReadRange AddHeaders="True" DataTable="[dt_list]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="338,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" PreserveFormat="True" SheetName="List">
+              <ui:ExcelReadRange.Range>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </ui:ExcelReadRange.Range>
+            </ui:ExcelReadRange>
+          </Sequence>
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ExcelApplicationScope>
+    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="530,316" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[TemplateVariableLead]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">{{</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[TemplateVariableTrail]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">}}</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="s:String[]">[LIstVariables]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="s:String[]">[dt_variables.AsEnumerable().Select(Function (a) a.Field(Of String)("NAME").ToString).ToArray()]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[TemplatPath]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[System.Environment.CurrentDirectory.ToString+"\config\DARA Generator\template\Template_Card_Num.doc"]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:Int32">[total]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:Int32">[dt_list.Rows.Count]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:Int32">[count]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:Int32">0</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[TemplatPath2]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[System.Environment.CurrentDirectory.ToString+"\config\DARA Generator\template\Template_Card_Num_2.doc"]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[TemplatPath3]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[System.Environment.CurrentDirectory.ToString+"\config\DARA Generator\template\Template_Card_Num_3.doc"]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:MultipleAssign>
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_list]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="530,1252" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,1130" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_19">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[count]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">[count + 1]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <uia:DisplayMessage BackColor="{x:Null}" FontSize="{x:Null}" ForeColor="{x:Null}" Handle="{x:Null}" DisplayName="Display Message" Hide="0" sap:VirtualizedContainerService.HintSize="434,124" sap2010:WorkflowViewState.IdRef="DisplayMessage_14" Message="[count.ToString() + &quot; / &quot; + total.ToString()]" NewStyle="True" Position="BottomRight" Preset="Info">
+              <uia:DisplayMessage.Opacity>
+                <InArgument x:TypeArguments="s:Nullable(x:Double)">
+                  <Literal x:TypeArguments="s:Nullable(x:Double)" Value="0.8" />
+                </InArgument>
+              </uia:DisplayMessage.Opacity>
+            </uia:DisplayMessage>
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="434,130" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+              <ui:MultipleAssign.AssignOperations>
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[client_name]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[row.Item("CH NAME").ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[FileLocation]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[System.Environment.CurrentDirectory.ToString+"\config\DARA Generator\output\"+client_name+".doc"]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                </scg:List>
+              </ui:MultipleAssign.AssignOperations>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:MultipleAssign>
+            <If Condition="[row.Item(&quot;CARD NUMBER&quot;).ToString.Count &gt; 1]" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="If_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="496,269" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:CopyFile ContinueOnError="{x:Null}" Destination="[FileLocation]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="434,158" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="[TemplatPath]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CopyFile>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="400,103" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[{ &quot;CARD NUMBER&quot;, &quot;2ND CARD NUMBER&quot; }.All(Function(columnName) row.Item(columnName).ToString().Length &gt; 1)]" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="If_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="496,269" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:CopyFile ContinueOnError="{x:Null}" Destination="[FileLocation]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="434,158" sap2010:WorkflowViewState.IdRef="CopyFile_2" Overwrite="True" Path="[TemplatPath2]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CopyFile>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="400,103" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[{ &quot;CARD NUMBER&quot;, &quot;2ND CARD NUMBER&quot;, &quot;3RD CARD NUMBER&quot; }.All(Function(columnName) row.Item(columnName).ToString().Length &gt; 1)]" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="If_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="400,163" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:CopyFile ContinueOnError="{x:Null}" Destination="[FileLocation]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="CopyFile_3" Overwrite="True" Path="[TemplatPath3]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CopyFile>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_5">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[PathFIleGenerated]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[System.IO.Path.GetFullPath(FileLocation.ToString)]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:InvokeCode ContinueOnError="{x:Null}" Code="'Console.WriteLine(PathFileGenerated)&#xA;'Initialize&#xA;Dim objWordApp As New Microsoft.Office.Interop.Word.ApplicationClass&#xA;objWordApp.Visible = False &#xA;&#xA;'Open copied Template&#xA;Dim objDoc As Microsoft.Office.Interop.Word.Document = objWordApp.Documents.Open(PathFileGenerated.ToString)  &#xA;objDoc = objWordApp.ActiveDocument  &#xA;&#xA;'Get Day Today&#xA;Dim dayNow As String = DateTime.Now.ToString(&quot;dd&quot;)&#xA;Dim ordinalDay As String = &quot;&quot;&#xA;&#xA;Select Case dayNow.Substring(dayNow.Length - 1)&#xA;    Case &quot;1&quot;&#xA;        If Not dayNow.EndsWith(&quot;11&quot;) Then&#xA;            ordinalDay = dayNow &amp; &quot;ˢᵗ&quot;&#xA;        Else&#xA;            ordinalDay = dayNow &amp; &quot;ᵗʰ&quot;&#xA;        End If&#xA;    Case &quot;2&quot;&#xA;        If Not dayNow.EndsWith(&quot;12&quot;) Then&#xA;            ordinalDay = dayNow &amp; &quot;ⁿᵈ&quot;&#xA;        Else&#xA;            ordinalDay = dayNow &amp; &quot;ᵗʰ&quot;&#xA;        End If&#xA;    Case &quot;3&quot;&#xA;        If Not dayNow.EndsWith(&quot;13&quot;) Then&#xA;            ordinalDay = dayNow &amp; &quot;ʳᵈ&quot;&#xA;        Else&#xA;            ordinalDay = dayNow &amp; &quot;ᵗʰ&quot;&#xA;        End If&#xA;    Case Else&#xA;        ordinalDay = dayNow &amp; &quot;ᵗʰ&quot;&#xA;End Select&#xA;&#xA;ordinalDay = ordinalDay.TrimStart(&quot;0&quot;c) ' remove leading zero&#xA;&#xA;'Get Month and Year Today&#xA;Dim monthAndYear As String = DateTime.Now.ToString(&quot;MMMM yyyy&quot;)&#xA;&#xA;'Find and replace some text  from ListTemplateVariables&#xA;For Each TemplateVariable As String In ListVariable&#xA;    If TemplateVariable = &quot;SHORT DATE&quot; Then&#xA;        objDoc.Content.Find.Execute(FindText:=String.Join(&quot;&quot;, TemplateVariableLead.ToString, TemplateVariable, TemplateVariableTrail.ToString), ReplaceWith:=ordinalDay.ToString(), Replace:=Microsoft.Office.Interop.Word.WdReplace.wdReplaceAll)&#xA;&#x9;ElseIf TemplateVariable = &quot;SHORT MONTH&quot; Then&#xA;&#x9;&#x9;objDoc.Content.Find.Execute(FindText:=String.Join(&quot;&quot;, TemplateVariableLead.ToString, TemplateVariable, TemplateVariableTrail.ToString), ReplaceWith:=monthAndYear.ToString(), Replace:=Microsoft.Office.Interop.Word.WdReplace.wdReplaceAll)&#xA;    ElseIf TemplateVariable = &quot;MONTHLY IF:&quot; OrElse TemplateVariable = &quot;2ND MONTHLY IF:&quot; OrElse TemplateVariable = &quot;3RD MONTHLY IF:&quot; Then&#xA;        If String.IsNullOrEmpty(TransactionItem(TemplateVariable).ToString()) OrElse TransactionItem(TemplateVariable).ToString() = &quot;0.00&quot; OrElse TransactionItem(TemplateVariable).ToString() = &quot;₱ 0.00&quot; Then&#xA;    &#x9;&#x9;objDoc.Content.Find.Execute(FindText:=String.Join(&quot;&quot;, TemplateVariableLead.ToString, TemplateVariable, TemplateVariableTrail.ToString), ReplaceWith:=&quot;-&quot;, Replace:=Microsoft.Office.Interop.Word.WdReplace.wdReplaceAll)&#xA;&#x9;&#x9;Else&#xA;            objDoc.Content.Find.Execute(FindText:=String.Join(&quot;&quot;, TemplateVariableLead.ToString, TemplateVariable, TemplateVariableTrail.ToString), ReplaceWith:=TransactionItem(TemplateVariable).ToString(), Replace:=Microsoft.Office.Interop.Word.WdReplace.wdReplaceAll)&#xA;        End If&#xA;    Else&#xA;        objDoc.Content.Find.Execute(FindText:=String.Join(&quot;&quot;, TemplateVariableLead.ToString, TemplateVariable, TemplateVariableTrail.ToString), ReplaceWith:=TransactionItem(TemplateVariable).ToString(), Replace:=Microsoft.Office.Interop.Word.WdReplace.wdReplaceAll)&#xA;    End If&#xA;Next&#xA;&#xA;'Save and close the document  &#xA;objDoc.Save()  &#xA;&#xA;'Export to PDF&#xA;Dim PathFilePDF As String&#xA;PathFilePDF = Path.GetDirectoryName(PathFileGenerated) +&quot;\&quot; +Path.GetFileNameWithoutExtension(PathFileGenerated)+&quot;.pdf&quot;&#xA;objDoc.ExportAsFixedFormat(PathFilePDF, Microsoft.Office.Interop.Word.WdExportFormat.wdExportFormatPDF)&#xA;&#xA;'Closing&#xA;objDoc.Close()  &#xA;objDoc = Nothing &#xA;objWordApp.Quit()  &#xA;objWordApp = Nothing &#xA;&#xA;'Delete Word Document&#xA;File.Delete(PathFileGenerated)&#xA;&#xA;'Set PDF as Final Generated Path&#xA;PathFileGenerated = PathFilePDF&#xA;&#xA;'Initialize Excel application&#xA;Dim xlApp As New Microsoft.Office.Interop.Excel.Application()&#xA;xlApp.Visible = False&#xA;&#xA;'Get config file location&#xA;Dim desktopPath As String = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory)&#xA;Dim configFolder As String = Path.Combine(desktopPath, &quot;DARA BOT&quot;, &quot;config&quot;, &quot;DARA Generator&quot;)&#xA;Dim configFile As String = Path.Combine(configFolder, &quot;config.xlsm&quot;)&#xA;&#xA;'Open workbook&#xA;Dim xlWorkbook As Microsoft.Office.Interop.Excel.Workbook = xlApp.Workbooks.Open(configFile)&#xA;&#xA;'Get worksheet&#xA;Dim xlWorksheet As Microsoft.Office.Interop.Excel.Worksheet = CType(xlWorkbook.Sheets(&quot;List&quot;), Microsoft.Office.Interop.Excel.Worksheet)&#xA;&#xA;'Clear contents of range&#xA;xlWorksheet.Range(&quot;A2:AH30&quot;).ClearContents()&#xA;&#xA;'Save and close workbook&#xA;xlWorkbook.Save()&#xA;xlWorkbook.Close()&#xA;xlWorkbook = Nothing&#xA;&#xA;'Quit Excel application&#xA;xlApp.Quit()&#xA;xlApp = Nothing&#xA;&#xA;" DisplayName="Invoke code - Copy Data to Template" sap:VirtualizedContainerService.HintSize="434,165" sap2010:WorkflowViewState.IdRef="InvokeCode_5">
+              <ui:InvokeCode.Arguments>
+                <InArgument x:TypeArguments="s:String[]" x:Key="ListVariable">[LIstVariables]</InArgument>
+                <InOutArgument x:TypeArguments="x:String" x:Key="PathFileGenerated">[PathFileGenerated]</InOutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="TemplateVariableLead">[TemplateVariableLead]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="TemplateVariableTrail">[TemplateVariableTrail]</InArgument>
+                <InArgument x:TypeArguments="sd:DataRow" x:Key="TransactionItem">[row]</InArgument>
+              </ui:InvokeCode.Arguments>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:InvokeCode>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ForEachRow>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File - Send PDF File to Lark" sap:VirtualizedContainerService.HintSize="530,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_35" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="process\Lark Sending.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="file_path">[FileLocation.Replace("\","/").ToString.Replace(".docx",".pdf").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="python_path">C:\Users\SPMWNMPC357\AppData\Local\Programs\Python\Python36\</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="chat_id">ou_324421d79a3bcc5da92e1f096d077fee</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim sourceFolder As String = Path.Combine(Environment.CurrentDirectory.ToString(), &quot;config\DARA Generator\output&quot;)&#xA;Dim destinationFolder As String = Path.Combine(Environment.CurrentDirectory.ToString(), &quot;config\DARA Generator\output\Done&quot;)&#xA;&#xA;' Get a list of all the PDF files in the source folder&#xA;Dim pdfFiles As String() = System.IO.Directory.GetFiles(sourceFolder, &quot;*.pdf&quot;)&#xA;&#xA;' Move each PDF file to the destination folder&#xA;For Each file As String In pdfFiles&#xA;    Dim fileName As String = System.IO.Path.GetFileName(file)&#xA;    Dim destinationFile As String = System.IO.Path.Combine(destinationFolder, fileName)&#xA;    If System.IO.File.Exists(destinationFile) Then&#xA;        System.IO.File.Delete(destinationFile)&#xA;    End If&#xA;    System.IO.File.Move(file, destinationFile)&#xA;Next&#xA;" DisplayName="Invoke code - Move Files" sap:VirtualizedContainerService.HintSize="530,165" sap2010:WorkflowViewState.IdRef="InvokeCode_8">
+      <ui:InvokeCode.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+  </Sequence>
+</Activity>
